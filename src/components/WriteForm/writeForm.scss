@@ -1,0 +1,13 @@
+.textWrite {
+    &::after {
+        display: none !important;
+    }
+
+    &::before {
+        display: none !important;
+    }
+
+    &:hover {
+        border: none !important;
+    }
+}

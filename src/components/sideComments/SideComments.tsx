@@ -66,8 +66,8 @@ export const SideComments = () => {
       <h3 className='text-[20px]'>
         <b>Комментарии </b> <ArrowRightIcon />
       </h3>
-      {items.map((obj) => (
-        <CommentItem {...obj} />
+      {items.map((obj, i) => (
+        <CommentItem key={i} {...obj} />
       ))}
     </div>
   );

@@ -25,10 +25,12 @@ export default function Header() {
                     <SearchIcon className="search" />
                     <input className="inputSize " type="text" placeholder="Поиск" />  
                   </div>    
-                  <Button>
-                    <CreateIcon style={{ color: 'black' }}/>
-                    <span className="ml-2 text-black">Создать</span>
-                  </Button>        
+                  <Link href="/write">
+                    <Button>
+                      <CreateIcon style={{ color: 'black' }}/>
+                      <span className="ml-2 text-black">Создать</span>
+                    </Button> 
+                  </Link>       
               </div>
               <div>
                 <Button>

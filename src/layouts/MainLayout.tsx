@@ -7,24 +7,26 @@ import { SideComments } from '@/components/sideComments/SideComments';
 interface MainLayoutProps {
   children: React.ReactNode;
   hideComments?: boolean;
-  contentFullWidth?: boolean;
+  hideLeftMenu?: boolean;
+  contentFullWidth?: string;
   className?: string;
 }
 
 export const MainLayout: React.FC<MainLayoutProps> = ({
   children,
-  contentFullWidth,
+  contentFullWidth = false,
   className,
   hideComments = false,
+  hideLeftMenu = false,
 }) => {
   return (
     <div>
         <Header />
         <div className={clsx('pt-[90px] flex justify-between align-center', className)}>
             <div className="leftSide">
-            <LeftMenu/>
+            {!hideLeftMenu &&<LeftMenu/>}
             </div>
-            <div className={clsx('content max-w-[1000px] top-[90px] absolute inset-0 m-auto', { 'content--full': contentFullWidth })}>
+            <div style={{width: '1000px'}} className={`content top-[90px] absolute inset-0 m-auto `}>
                 <main>{children}</main>
             </div>
             <div>
