@@ -21,6 +21,16 @@
       }
     }
   }
+
+  .rotated {
+    width: 100px;
+    transform: rotate(90deg) translateX(290px) !important; 
+    transform-origin: right;
+
+    svg {
+     transform: rotate(90deg);
+    }       
+  }
   
   .commentItem {
     margin-bottom: 25px;

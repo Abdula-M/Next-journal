@@ -7,7 +7,7 @@ import WriteForm from '@/components/WriteForm/WriteForm';
 const WritePage: NextPage = () => {
     return (
         <MainLayout hideComments hideLeftMenu>
-            <WriteForm title='Новый пост'/>
+            <WriteForm/>
         </MainLayout>
     )
 }

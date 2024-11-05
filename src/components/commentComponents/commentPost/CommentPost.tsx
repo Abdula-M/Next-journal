@@ -1,17 +1,19 @@
+'use client'
 import React from 'react';
 import { Typography, IconButton, MenuItem, Menu } from '@mui/material';
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 
-import styles from './Comment.module.scss';
 
 interface CommentPostProps {
-  user?: {
+  user: {
     fullname: string;
+    avatarUrl: string
   };
-  text?: string;
+  createdAt: string;
+  text: string;
 }
 
-export const Comment: React.FC<CommentPostProps> = ({ user, text }) => {
+export const CommentPost: React.FC<CommentPostProps> = ({ user, text, createdAt}) => {
     const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null);
     const [isMenuVisible, setIsMenuVisible] = React.useState(true);
 
@@ -43,15 +45,14 @@ export const Comment: React.FC<CommentPostProps> = ({ user, text }) => {
     <div className='mx-auto mt-[20px]'>
       <div className="flex align-center mb-[10px]">
         <img width={30} height={30} className='rounded-[30px] border-[1px] border-solid border-rgb(0, 0, 0, 0.05) mr-[10px]'
-          src="https://leonardo.osnova.io/104b03b4-5173-fd9f-2af9-b458dddc4a23/-/scale_crop/108x108/-/format/webp/"
+          src={user.avatarUrl}
           alt="Avatar"
         />
-        <b className='text-[16px]'>Master Oogway</b>
-        <span className='text-[12px] opacity-[0.8] ml-[10px]'>5 часов</span>
+        <b className='text-[16px]'>{user.fullname}</b>
+        <span className='text-[12px] opacity-[0.8] ml-[10px]'>{createdAt}</span>
       </div>
       <Typography className='mb-[10px]'>
-        Суперджет это ад адский, два раза летала и оба раза прощалась с жизнью. Трясёт хуже, чем в
-        копейке по разьебанной дороге
+        {text}
       </Typography>
       <span className="text-[14px] mr-2 cursor-pointer hover:text-[#346eb8]">Ответить</span>
       <IconButton onClick={handleClick}>

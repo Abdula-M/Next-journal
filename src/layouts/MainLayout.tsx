@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import  LeftMenu  from '../components/leftMenu/LeftMenu';
 import Header from '../components/header/Header';
-import { SideComments } from '@/components/sideComments/SideComments';
+import { SideComments } from '@/components/commentComponents/sideComments/SideComments';
 
 interface MainLayoutProps {
   children: React.ReactNode;

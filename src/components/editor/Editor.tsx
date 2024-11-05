@@ -60,7 +60,7 @@ export const Editor = () => {
         ref={divRef}
         style={{ paddingBottom: 20 }}
       ></div>
-      <div className="flex justify-end pb-5 pr-5">
+      <div className="flex justify-end pb-5 pr-5 ">
         <Button variant="contained" color="primary">
           Опубликовать
         </Button>

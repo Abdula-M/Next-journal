@@ -1,6 +1,6 @@
 import Post from "../components/post/Post";
 import LeftMenu from "../components/leftMenu/LeftMenu";
-import { SideComments } from "@/components/sideComments/SideComments";
+import { SideComments } from "@/components/commentComponents/sideComments/SideComments";
 import Header from "../components/header/Header";
 
 
